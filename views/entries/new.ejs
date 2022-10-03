@@ -1,12 +1,15 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/entries/index.css" />
 <%- include('../partials/nav') %>
+
 <main>
-  <h1><%= title %></h1>
-  <form>
+  <h1></h1>
+  <form action="/entries" method="POST">
     <h3>Tell us about your day</h3>
-    <textarea rows="15" cols="13" required></textarea> 
-    <button id="submit-button">Submit</button>
+    <h4>Journal title</h4>
+    <input type="text" name="title"> 
+    <textarea rows="15" cols="13" name="text" required></textarea> 
+    <button type="submit" id="submit-button">Submit</button>
   </form>
 </main>
 

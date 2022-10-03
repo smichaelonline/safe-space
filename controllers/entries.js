@@ -1,7 +1,17 @@
 import { Entry } from '../models/entry.js'
 
 function index(req, res){
-  console.log("view all journals")
+  Entry.find({})
+  .then(entries => {
+    res.render('entries/index', {
+      entries, 
+      title: 'Your Journal'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
+  })
 }
 
 function newEntry (req,res){
@@ -10,7 +20,49 @@ function newEntry (req,res){
   })
 }
 
+function create(req,res){
+  Entry.create(req.body)
+  .then(entry => {
+    res.redirect('/entries')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
+  })
+}
+
+function show(req,res){
+  Entry.findById(req.params.id)
+  .then(entry => {
+    res.render('entries/show', {
+      entry, 
+      title: 'Journal Entry'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
+  })
+}
+
+function edit(req,res){
+  Entry.findByIdAndUpdate(req.params.id)
+  .then(entry => {
+    res.render('entries/edit', {
+      entry,
+      title: 'Update your journal'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
+  })
+}
+
 export {
   index, 
   newEntry as new, 
+  create, 
+  show,
+  edit,
 }

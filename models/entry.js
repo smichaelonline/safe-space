@@ -1,10 +1,13 @@
-import { text } from "express";
 import mongoose from "mongoose";
 
 const Schema = mongoose.Schema
 
 const entrySchema = new Schema({ 
-  date: Date, 
+  title: String, 
+  date:{
+    type: Date,
+    default: new Date(),
+  }, 
   text: String,
 }, {
   timestamps: true
