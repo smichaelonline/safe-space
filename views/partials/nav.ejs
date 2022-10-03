@@ -9,6 +9,11 @@
         <button type="submit">Logout</button>
       </a>
       <a
+      href='/entries/<%= user.profile._id %>/journal' <%- title === 'Your Journal' ? 'class="active"' : '' %>
+    >
+      Your Journal
+    </a>
+      <a
       href="/entries/new" <%- title === 'Add Entry' ? 'class="active"' : '' %>
     >
       Add Entry

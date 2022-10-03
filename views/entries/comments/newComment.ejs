@@ -1,0 +1,11 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <form action="/entries/<%= entry._id %>" method="POST"> 
+    <textarea rows="10" cols="15" name="text" placeholder="Share kind words..." required></textarea>
+    <button type="submit">Post</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

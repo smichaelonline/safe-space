@@ -1,11 +1,12 @@
 import { Entry } from '../models/entry.js'
 
 function index(req, res){
-  Entry.find({})
+  Entry.find({private:false})
+  .populate('authorId')
   .then(entries => {
     res.render('entries/index', {
       entries, 
-      title: 'Your Journal'
+      title: 'Feed'
     })
   })
   .catch(err => {
@@ -21,9 +22,11 @@ function newEntry (req,res){
 }
 
 function create(req,res){
+  req.body.private = !!req.body.private
+  req.body.authorId = req.user.profile._id
   Entry.create(req.body)
   .then(entry => {
-    res.redirect('/entries')
+    res.redirect(`/entries/${entry._id}`)
   })
   .catch(err => {
     console.log(err)
@@ -33,7 +36,9 @@ function create(req,res){
 
 function show(req,res){
   Entry.findById(req.params.id)
+  .populate('authorId')
   .then(entry => {
+    //entry.date = moment().format('MMMM Do YYYY').entry.date
     res.render('entries/show', {
       entry, 
       title: 'Journal Entry'
@@ -81,6 +86,30 @@ function deleteEntry(req,res){
   })
 }
 
+function journalIndex(req,res) {
+  Entry.find({authorId: req.user.profile._id})
+  .then(entries => {
+    res.render('entries/yourJournal', {
+      entries, 
+      title: 'Your Journal'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
+  })
+}
+
+function newComment(req,res) {
+  Entry.findById(req.params.id)
+  .then(entry => {
+    res.render('entries/new', {
+      entry,
+      title: 'Add Comment'
+    })
+  })
+}
+
 export {
   index, 
   newEntry as new, 
@@ -89,4 +118,6 @@ export {
   edit,
   update,
   deleteEntry as delete, 
+  journalIndex, 
+  newComment, 
 }

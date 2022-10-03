@@ -3,17 +3,22 @@
 
 <main>
   <h1><%= entry.date %></h1>
+  <h4><%= entry.authorId.name %></h4>
   <div><%= entry.text %></div>
+  <% if (user.profile._id.equals(entry.authorId._id)) { %>
   <div>
-    <form action="/entries/<%= entry._id %>/edit">
-    <button class="edit-entry" id="edit-entry-button">Edit</button>
-    </form>
+    <div>
+      <form action="/entries/<%= entry._id %>/edit">
+        <button class="edit-entry" id="edit-entry-button">Edit</button>
+      </form>
+    </div>
+    <div>
+      <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
+        <button type="submit" id="delete-button">Delete</button>
+      </form>
+    </div>
   </div>
-  <div>
-    <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
-    <button type="submit" id="delete-button">Delete</button>
-    </form>
-  </div>
+<% } %>
 </main>
 
 <%- include('../partials/footer') %>
