@@ -19,6 +19,23 @@
     </div>
   </div>
 <% } %>
+  <div>
+    <form action="/entries/<%= entry._id %>/comments" method="POST"> 
+      <textarea rows="10" cols="15" name="text" placeholder="Share kind words..." required></textarea>
+      <button type="submit">Post</button>
+    </form>
+    <p><%= entry.comments.length %></p>
+  </div>
+  <ul>
+    <% entry.comments.forEach(comment => { %> 
+      <li>
+        <img src="<%= comment.authorId.avatar %>" />
+        <%= comment.authorId.name %>
+        <%= comment.date %>
+        <%= comment.text %>
+      </li>
+    <% }) %> 
+  </ul>
 </main>
 
 <%- include('../partials/footer') %>

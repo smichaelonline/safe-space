@@ -37,6 +37,7 @@ function create(req,res){
 function show(req,res){
   Entry.findById(req.params.id)
   .populate('authorId')
+  .populate('comments.authorId')
   .then(entry => {
     //entry.date = moment().format('MMMM Do YYYY').entry.date
     res.render('entries/show', {
@@ -100,15 +101,20 @@ function journalIndex(req,res) {
   })
 }
 
-function newComment(req,res) {
+function createComment(req,res) {
+  req.body.authorId = req.user.profile._id
   Entry.findById(req.params.id)
   .then(entry => {
-    res.render('entries/new', {
-      entry,
-      title: 'Add Comment'
-    })
+    entry.comments.push(req.body)
+    entry.save()
+    res.redirect(`/entries/${entry._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
   })
 }
+
 
 export {
   index, 
@@ -119,5 +125,5 @@ export {
   update,
   deleteEntry as delete, 
   journalIndex, 
-  newComment, 
+  createComment,
 }
