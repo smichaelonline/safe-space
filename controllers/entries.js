@@ -46,12 +46,34 @@ function show(req,res){
 }
 
 function edit(req,res){
-  Entry.findByIdAndUpdate(req.params.id)
+  Entry.findById(req.params.id)
   .then(entry => {
     res.render('entries/edit', {
       entry,
       title: 'Update your journal'
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
+  })
+}
+
+function update(req,res){
+  Entry.findByIdAndUpdate(req.params.id, req.body)
+  .then(entry => {
+      res.redirect(`/entries/${entry._id}`)
+    })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
+  })
+}
+
+function deleteEntry(req,res){
+  Entry.findByIdAndDelete(req.params.id)
+  .then(entry => {
+    res.redirect('/entries')
   })
   .catch(err => {
     console.log(err)
@@ -65,4 +87,6 @@ export {
   create, 
   show,
   edit,
+  update,
+  deleteEntry as delete, 
 }

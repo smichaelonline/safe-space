@@ -7,10 +7,12 @@
   <div>
     <form action="/entries/<%= entry._id %>/edit">
     <button class="edit-entry" id="edit-entry-button">Edit</button>
+    </form>
   </div>
   <div>
-    <form action="/entries/<%= entry._id %>?method=DELETE" method="POST">
-    <button id="delete-button">Delete</button>
+    <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
+    <button type="submit" id="delete-button">Delete</button>
+    </form>
   </div>
 </main>
 
