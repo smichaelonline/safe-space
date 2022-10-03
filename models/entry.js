@@ -9,6 +9,7 @@ const entrySchema = new Schema({
     default: new Date(),
   }, 
   text: String,
+  comments: [{type: Schema.Types.ObjectId, ref: 'Comment'}]
 }, {
   timestamps: true
 })
