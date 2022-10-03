@@ -6,7 +6,6 @@ const Schema = mongoose.Schema
 const entrySchema = new Schema({ 
   date: Date, 
   text: String,
-  comments: [CommentSchema], 
 }, {
   timestamps: true
 })

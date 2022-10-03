@@ -8,6 +8,16 @@
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
       </a>
+      <a
+      href="/entries/new" <%- title === 'Add Entry' ? 'class="active"' : '' %>
+    >
+      Add Entry
+    </a>
+    <a 
+      href="/entries/" <%- title === 'View Entries' ? 'class="active"' : '' %>
+    >
+      View Entries
+    </a>
     <% } else { %>
       <div 
         id="g_id_onload"

@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import { Entry } from './entry.js'
 
 const Schema = mongoose.Schema
 
