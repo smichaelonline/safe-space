@@ -3,26 +3,31 @@
   <% } %>
 </head>
 <body>
-  <nav>
+  <nav class="nav-container">
     <% if (user) { %>
-      <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
+      <div>
+        <img src="/assets/safe-space-logo.png" id="nav-logo"> 
+      </div> 
+      <div>
+        <a
+        href='/entries/<%= user.profile._id %>/journal' <%- title === 'Your Journal' ? 'class="active"' : '' %>
+      >
+        Your Journal
       </a>
-      <a
-      href='/entries/<%= user.profile._id %>/journal' <%- title === 'Your Journal' ? 'class="active"' : '' %>
-    >
-      Your Journal
-    </a>
-      <a
-      href="/entries/new" <%- title === 'Add Entry' ? 'class="active"' : '' %>
-    >
-      Add Entry
-    </a>
-    <a 
-      href="/entries/" <%- title === 'View Entries' ? 'class="active"' : '' %>
-    >
-      View Entries
-    </a>
+        <a
+        href="/entries/new" <%- title === 'Add Entry' ? 'class="active"' : '' %>
+      >
+        Add Entry
+      </a>
+      <a 
+        href="/entries/" <%- title === 'Your Community' ? 'class="active"' : '' %>
+      >
+        Your Community 
+      </a>
+      <a href="/auth/logout" class="right" type="submit"><i class="fa-solid fa-right-from-bracket"></i>
+      </a>
+      </div>
+      
     <% } else { %>
       <div 
         id="g_id_onload"

@@ -39,3 +39,29 @@ main {
 .right {
   margin-left: auto;
 }
+
+#hands-with-sun{ 
+  width: 100vw;
+}
+
+#nav-logo {
+  height: 50px;
+}
+
+.nav-container {
+  display: flex; 
+  justify-content: space-between;
+}
+
+a {
+  color: darkgray;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black; 
+}
+
+a:hover {
+  color: palevioletred; 
+}
