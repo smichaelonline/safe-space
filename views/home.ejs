@@ -2,15 +2,17 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <div> 
-    <h2>What would you like to do today?</h2>
+  <div id="intro-block"> 
+    <h2 id="intro-question">What would you like to do today?</h2>
   </div>
   <div>
-    <a href="/entries/new">Write about your day</a>
+    <ul id="options"> 
+      <li><a href="/entries/new">Write about your day</a></li>
 
-    <a href="/entries/">See how others are doing</a>
-    
-    <a href="/help">Ask for help</a>
+      <li><a href="/entries/">See how others are doing</a></li>
+
+      <li><a href="/help">Ask for help</a></li>
+  </ul>
   </div>
   <img src="/assets/hands-hold.png" alt="hands-with-sun" id="hands-with-sun">  
 </main>
