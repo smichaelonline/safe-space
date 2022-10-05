@@ -29,7 +29,7 @@
   <ul>
     <% entry.comments.forEach(comment => { %> 
       <li>
-        <img src="<%= comment.authorId.avatar %>" />
+        <img src="<%= comment.authorId.avatar %>" class="avatar"/>
         <%= comment.authorId.name %>
         <%= comment.date %>
         <%= comment.text %>

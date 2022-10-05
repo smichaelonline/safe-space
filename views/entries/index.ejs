@@ -6,6 +6,7 @@
   <% entries.forEach(entry => { %>
     <div id="entryDate"><%= entry.date.toString().slice(0,15)%></div>
     <div id="entryDate"><%= entry.date.toString().slice(15,24)%></div>
+    <img src="<%= entry.authorId.avatar %>" class="avatar"/>
     <p><%= entry.authorId.name %></p>
     <div id="entryText"><%= entry.text%></div>
     <a href="/entries/<%= entry._id %>" id="Details">Details</a>

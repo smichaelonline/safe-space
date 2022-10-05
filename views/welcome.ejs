@@ -1,24 +1,26 @@
 <%- include('./partials/html-head') %>
 
 <main> 
-  <h1>Welcome to</h1>
-  <img src="/assets/safe-space-logo.png" alt="safe-space-logo"> 
-  <script defer src="https://accounts.google.com/gsi/client"></script>
-  <div 
-        id="g_id_onload"
-        data-client_id="<%= googleClientID %>"
-        data-login_uri="/auth/google"
-        data-auto_prompt="false"
-      ></div>
-      <div 
-        class="g_id_signin right"
-        data-type="standard"
-        data-size="large"
-        data-theme="outline"
-        data-text="sign_in_with"
-        data-shape="rectangular"
-        data-logo_alignment="left"
-      ></div>
+  <h1 id="welcome">Welcome to</h1>
+  <img src="/assets/safe-space-logo.png" alt="safe-space-logo" id="main-logo"> 
+  <div id="google-auth">
+    <script defer src="https://accounts.google.com/gsi/client"></script>
+    <div 
+          id="g_id_onload"
+          data-client_id="<%= googleClientID %>"
+          data-login_uri="/auth/google"
+          data-auto_prompt="false"
+        ></div>
+        <div 
+          class="g_id_signin right"
+          data-type="standard"
+          data-size="medium"
+          data-theme="outline"
+          data-text="sign_in_with"
+          data-shape="rectangular"
+          data-logo_alignment="left"
+        ></div>
+    </div>
 </main>
 
 <%- include('./partials/footer') %>
