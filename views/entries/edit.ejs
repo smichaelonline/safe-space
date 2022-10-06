@@ -1,13 +1,38 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/entries/edit.css" />
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <form id="new-form" action="/entries/<%= entry._id %>?_method=PUT" method="POST">
-    <input type="text" name="title"> 
-    <textarea placeholder="<%= entry.text %>" rows="15" cols="13" name="text" required></textarea> 
-    <button type="submit" id="update-button">Update</button>
-  </form>
+  <div class="new-body">
+    <h1 id="update" class="animate__animated animate__fadeInDown"><%= title %></h1>
+    <div class="form-div"> 
+      <form id="new-form" action="/entries/<%= entry._id %>?_method=PUT" method="POST">
+        <div id="title">
+          <h4>Journal title:  </h4>
+          <input type="text" placeholder="<%= entry.title %>"name="title"> 
+        </div>
+        <div id="previous-post"> 
+          <h4>Previous Post: </h4>
+          <div id="prev"><%= entry.text %></div>
+        </div>
+        <div id="text-area-div">
+          <textarea placeholder="Update your journal here..." rows="15" cols="13" name="text" required></textarea> 
+        </div>
+        <div id="private-toggle">
+          <label for="private">Private</label> 
+          <input type="checkbox" name="private" id="private" class="cm-toggle">
+        </div>
+        <div id="submit-button">
+          <button><span class="text">Submit</span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
