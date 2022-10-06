@@ -115,7 +115,18 @@ function createComment(req,res) {
   })
 }
 
-
+function deleteComment(req,res) {
+  Entry.findById(req.params.id)
+  .then(entry => {
+    entry.comments.remove(req.params.commentId)
+    entry.save()
+    res.redirect(`/entries/${entry._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/entries')
+  })
+}
 
 export {
   index, 
@@ -127,4 +138,5 @@ export {
   deleteEntry as delete, 
   journalIndex, 
   createComment,
+  deleteComment, 
 }
