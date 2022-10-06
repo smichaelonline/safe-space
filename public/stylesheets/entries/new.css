@@ -157,49 +157,48 @@ button .blob:nth-child(2) {
 	left: 0em;
 	top: 0;
 	background: #389460;
- }
- 
- button .blob:nth-child(3) {
+}
+
+button .blob:nth-child(3) {
 	left: 1.8em;
 	top: 0;
 	z-index: -1;
 	background: #fbd773;
- }
- 
- button .blob:nth-child(4) {
+}
+
+button .blob:nth-child(4) {
 	left: 4em;
 	top: -1em;
 	background: #d1a12a;
- }
- 
- button .blob:nth-child(5) {
+}
+
+button .blob:nth-child(5) {
 	left: 4.3em;
 	top: 1.6em;
 	background: #1a6339;
- }
- 
- button:hover .blob:nth-child(2) {
+}
+
+button:hover .blob:nth-child(2) {
 	background: #fbd773;
- }
- 
- button:hover .blob:nth-child(3) {
+}
+
+button:hover .blob:nth-child(3) {
 	background: #389460;
- }
- 
- button:hover .blob:nth-child(4) {
+}
+
+button:hover .blob:nth-child(4) {
 	background: #d1a12a;
- }
- 
- button:hover .blob:nth-child(5) {
+}
+
+button:hover .blob:nth-child(5) {
 	background: #1a6339;
- }
- 
- button:hover .blob {
+}
+
+button:hover .blob {
 	transform: scale(1.3);
- }
- 
- button:active {
+}
+
+button:active {
 	border: 2px solid white;
- }
- 
- 
+}
+

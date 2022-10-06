@@ -1,11 +1,21 @@
 <%- include('../../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/comments/newComment.css" />
 <%- include('../../partials/nav') %>
 
 <main>
-  <form action="/entries/<%= entry._id %>" method="POST"> 
-    <textarea rows="10" cols="15" name="text" placeholder="Share kind words..." required></textarea>
-    <button type="submit">Post</button>
-  </form>
+  <div id="comment-div">
+    <form action="/entries/<%= entry._id %>" method="POST"> 
+      <textarea rows="10" cols="15" name="text" placeholder="Share kind words..." required></textarea>
+      <div id="post-button">
+        <button><span class="text">Post</span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+        </button>
+      </div>
+    </form>
+  </div>
 </main>
 
 <%- include('../../partials/footer') %>

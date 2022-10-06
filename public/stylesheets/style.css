@@ -83,7 +83,7 @@ a:hover {
   font-style: normal;
   text-align: center;
   animation: fadeIn; 
-  animation-duration: 5s; 
+  animation-duration: 4s; 
 }
 
 #intro-question{
@@ -120,7 +120,7 @@ a:hover {
   font-weight: 300;
   font-style: normal;
   animation: fadeIn; 
-  animation-duration: 5s; 
+  animation-duration: 4s; 
 }
 
 #google-auth {

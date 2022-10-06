@@ -1,23 +1,38 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/entries/show.css"
 <%- include('../partials/nav') %>
 
 <main>
-  <div >
+  <div id="author-info">
     <h1><%= entry.date.toString().slice(0,15)%></h1>
     <h4><%= entry.authorId.name %></h4>
     <h6><%= entry.date.toString().slice(15,24)%></h6>
     <div><%= entry.text %></div>
   </div>
   <% if (user.profile._id.equals(entry.authorId._id)) { %>
-  <div>
+  <div id="form-div">
     <div>
       <form action="/entries/<%= entry._id %>/edit">
-        <button class="edit-entry" id="edit-entry-button">Edit</button>
+        <div type="submit" id="edit-button">
+          <button><span class="text">Edit</span>
+            <span class="blob3"></span>
+            <span class="blob3"></span>
+            <span class="blob3"></span>
+            <span class="blob3"></span>
+          </button>
+        </div>
       </form>
     </div>
     <div>
       <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
-        <button type="submit" id="delete-button">Delete</button>
+        <div id="delete-button">
+          <button type="submit"><span class="text">Delete</span>
+            <span class="blob2"></span>
+            <span class="blob2"></span>
+            <span class="blob2"></span>
+            <span class="blob2"></span>
+          </button>
+        </div>
       </form>
     </div>
   </div>
@@ -25,9 +40,19 @@
   <div>
     <form action="/entries/<%= entry._id %>/comments" method="POST"> 
       <textarea rows="10" cols="15" name="text" placeholder="Share kind words..." required></textarea>
-      <button type="submit">Post</button>
+      <div id="post-button">
+        <button><span class="text">Post</span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+        </button>
+      </div>
     </form>
-    <p><%= entry.comments.length %></p>
+    <div>
+      <i class="fa-regular fa-comments"></i>
+      <p><%= entry.comments.length %></p>
+    </div>
   </div>
   <ul>
     <% entry.comments.forEach(comment => { %> 
