@@ -6,8 +6,11 @@
 ## About the App 
 
 ## Getting Started 
+[Safe Space](https://safe-space-journal-and-community.fly.dev/)
 
 ## Planning 
+- [Trello Board](https://trello.com/invite/b/sJSXYzy5/41f1fabb8843138b6316bc38a48dc1ea/safe-space)
+- [Wireframe and ERD](https://whimsical.com/safe-space-W1YXcz2jxqdnxKpzkzvd39)
 
 ## Technologies Used 
 - Javascript 
@@ -31,6 +34,6 @@
 - [ ] Create a cheer button (similar to a like button) that shows how many users are cheering for someone
 
 ## Credits
-- [Toggle button for private](https://codeconvey.com/convert-checkbox-to-toggle-button-css/)
+- [Toggle button for private feature](https://codeconvey.com/convert-checkbox-to-toggle-button-css/)
 - Black Mango font from Canva
 - Animations from Animate.CSS 
