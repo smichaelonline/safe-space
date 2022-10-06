@@ -1,18 +1,52 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/help.css" />
 <%- include('./partials/nav') %>
 
 <main>
   <h1>Ask for Help</h1>
-
-  <div>
-    <p> Crisis Text Line</p>
+  <div class="help-buttons">
+    <h3>Crisis Text Line</h3>
     <p>Text "HELLO" to 741741</p>
+    <div id="crisis-text-line">
+      <a href="sms:741741 &body= HELLO ">
+        <button>
+          <span class="text">Text</span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+        </button>
+      </a>
+    </div>
+    <div>
+      <h3>988 Suicide & Crisis Help Line</h3>
+      <p>
+        Call or text 988 to be connected with a trained counselor. Available 24/7
+      </p>
+      <div id="help-line">
+        <a href="sms:988 &body= I need help.">
+        <button >
+          <span class="text">Text</span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+        </button>
+      </a>
+      </div>
+    </div>
   </div>
-  <div> 
-    <p>988 Suicide & Crisis Help Line</p>
-    <p>Call or text 988 to be connected with a trained counselor. Available 24/7</p>
+  <div id="back-to-home">
+    <a href="/">
+    <button>
+      <span class="text">Back to Home</span>
+      <span class="blob2"></span>
+      <span class="blob2"></span>
+      <span class="blob2"></span>
+      <span class="blob2"></span>
+    </button>
+  </a>
   </div>
-  <button> Back to Home </button>
 </main>
 
 <%- include('./partials/footer') %>

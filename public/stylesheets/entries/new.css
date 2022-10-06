@@ -42,7 +42,7 @@
 }
 
 .new-body {
-	min-height: 100vh;
+	max-height: 100vh;
 }
 
 #sun {
@@ -55,6 +55,14 @@
   font-style: bold;
   text-align: center;
 	margin: 0; 
+}
+
+#text-area-div {
+	width: 100%; 
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 textarea {
@@ -97,6 +105,13 @@ h4, label {
 	align-items: center;
 }
 
+.form-div, .form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 /* From uiverse.io by @adamgiebl */
 
 button {
@@ -110,9 +125,9 @@ button {
 	color: white;
 	overflow: hidden;
 	border: none;
- }
- 
- button .text {
+}
+
+button .text {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -125,18 +140,18 @@ button {
 	z-index: 1;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
- }
- 
- button .blob {
+}
+
+button .blob {
 	position: absolute;
 	z-index: -1;
 	border-radius: 5em;
 	width: 5em;
 	height: 3em;
 	transition: transform .3s ease-in-out, background .3s ease-in-out;
- }
- 
- button .blob:nth-child(2) {
+}
+
+button .blob:nth-child(2) {
 	left: 0em;
 	top: 0;
 	background: #389460;

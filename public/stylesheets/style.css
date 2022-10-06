@@ -65,6 +65,8 @@ a:hover {
 #main-logo {
   width: 100vw;
   padding: 0;
+  animation: fadeIn; 
+  animation-duration: 5s; 
 }
 
 #main-logo, #welcome {
@@ -80,6 +82,8 @@ a:hover {
   font-weight: 300;
   font-style: normal;
   text-align: center;
+  animation: fadeIn; 
+  animation-duration: 5s; 
 }
 
 #intro-question{
@@ -115,7 +119,13 @@ a:hover {
   font-family: itc-avant-garde-gothic-pro,sans-serif;
   font-weight: 300;
   font-style: normal;
+  animation: fadeIn; 
+  animation-duration: 5s; 
 }
 
+#google-auth {
+  animation: fadeIn; 
+  animation-duration: 5s;
+}
 
 

@@ -2,10 +2,12 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= entry.date.toString().slice(0,15)%></h1>
-  <h4><%= entry.authorId.name %></h4>
-  <h6><%= entry.date.toString().slice(15,24)%></h6>
-  <div><%= entry.text %></div>
+  <div >
+    <h1><%= entry.date.toString().slice(0,15)%></h1>
+    <h4><%= entry.authorId.name %></h4>
+    <h6><%= entry.date.toString().slice(15,24)%></h6>
+    <div><%= entry.text %></div>
+  </div>
   <% if (user.profile._id.equals(entry.authorId._id)) { %>
   <div>
     <div>
@@ -35,7 +37,7 @@
         <%= entry.date.toString().slice(0,15)%>
         <%= entry.date.toString().slice(15,24)%>
         <%= comment.text %>
-        <% if (user.profile._id.equals(entry.authorId._id)) { %>
+        <% if (user.profile._id.equals(comment.authorId._id)) { %>
         <form action="/entries/<%= entry._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
           <button type="submit" id="delete-icon"><i class="fa-solid fa-trash-can"></i></button>
         </form>
