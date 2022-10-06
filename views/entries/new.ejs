@@ -4,23 +4,29 @@
 
 <main>
   <div class="new-body">
+
     <div class="new-image">
       <img id="sun" src="/assets/sun-banner.png" alt="sun banner">
     </div>
+
     <div class="form-div">
       <form class="form" action="/entries" method="POST">
         <h3 class="animate__animated animate__fadeInDown" id="journal-intro">Tell us about your day</h3>
+      
         <div id="title"> 
           <h4>Journal title:  </h4>
           <input type="text" name="title"> 
         </div>
+
         <div id="text-area-div"> 
           <textarea rows="20" cols="16" name="text" placeholder="Write your journal here..."required></textarea>
         </div>
+
         <div id="private-toggle">
           <label for="private">Private</label> 
           <input type="checkbox" name="private" id="private" class="cm-toggle">
         </div>
+
         <div id="submit-button">
           <button><span class="text">Submit</span>
             <span class="blob"></span>
@@ -29,6 +35,7 @@
             <span class="blob"></span>
           </button>
         </div>
+        
       </form>
     </div>
   </div>

@@ -3,25 +3,42 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1 id="community-line" class="animate__animated animate__fadeInDown">Your Community</h1>
-  <img id="hand-sun" src="/assets/hand-with-sun.png" alt="Hand reaching out to sun">
-  <% entries.forEach(entry => { %>
-    <div id="entryDate"><%= entry.date.toString().slice(0,15)%></div>
-    <div id="entryDate"><%= entry.date.toString().slice(15,24)%></div>
-    <img src="<%= entry.authorId.avatar %>" class="avatar"/>
-    <p><%= entry.authorId.name %></p>
-    <div id="entryText"><%= entry.text%></div>
-    <div id="details-button">
-      <a href="/entries/<%= entry._id %>" id="Details">
-        <button><span class="text">Details</span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-        </button>
-        </a>
+  <div id="body-div">
+    <div id="header-div"> 
+      <h1 id="community-line" class="animate__animated animate__fadeInDown">Your Community</h1>
+      <img id="hand-sun" src="/assets/hand-with-sun.png" alt="Hand reaching out to sun">
     </div>
-  <% }) %>
+
+    <div id="entry-div">
+      <% entries.forEach(entry => { %>
+        <div id="entry-date">
+          <%= entry.date.toString().slice(0,15)%>
+        </div>
+        
+        <div id="entry-time">
+          <%= entry.date.toString().slice(15,24)%>
+        </div>
+
+        <img src="<%= entry.authorId.avatar %>" class="avatar"/>
+        <p><%= entry.authorId.name %></p>
+
+        <div 
+        id="entry-text"><%= entry.text%>
+        </div>
+
+        <div id="details-button">
+          <a href="/entries/<%= entry._id %>" id="Details">
+            <button><span class="text">Details</span>
+              <span class="blob"></span>
+              <span class="blob"></span>
+              <span class="blob"></span>
+              <span class="blob"></span>
+            </button>
+            </a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
