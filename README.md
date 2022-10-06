@@ -11,7 +11,7 @@
 `#d1a12a`
 
 ## Getting Started 
-Start [Safe Space](https://safe-space-journal-and-community.fly.dev/)
+Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly.dev/)
 
 ## Planning 
 - [Trello Board](https://trello.com/invite/b/sJSXYzy5/41f1fabb8843138b6316bc38a48dc1ea/safe-space)
