@@ -1,3 +1,19 @@
+#comment-list{
+  list-style: none;
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.avatar {
+  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+}
+
+#single-comment {
+  list-style: none;
+}
 /* From uiverse.io by @adamgiebl */
 
 button {
@@ -5,8 +21,8 @@ button {
 	font-family: inherit;
 	font-size: 18px;
 	border-radius: 40em;
-  width: 8em;
-  height: 3em;
+  width: 5em;
+  height: 2em;
   z-index: 1;
   color: white;
   overflow: hidden;
@@ -19,7 +35,7 @@ button .text {
   top: 0;
   width: 100%;
   height: 100%;
-  line-height: 3em;
+  line-height: 2em;
   border-radius: 40em;
   border: none;
   background: linear-gradient(rgba(255, 255, 255, 0.473), rgba(150, 150, 150, 0.25));
@@ -54,7 +70,7 @@ button .blob:nth-child(3) {
 button .blob:nth-child(4) {
   left: 4em;
   top: -1em;
-  background: #d1a12a;
+  background: #44955b;
 }
 
 button .blob:nth-child(5) {
@@ -100,14 +116,14 @@ transition: transform .3s ease-in-out, background .3s ease-in-out;
 button .blob3:nth-child(2) {
 left: 0em;
 top: 0;
-background: #389460;
+background: #eb8a3a;
 }
 
 button .blob3:nth-child(3) {
 left: 1.8em;
 top: 0;
 z-index: -1;
-background: #fbd773;
+background: #eaaf01;
 }
 
 button .blob3:nth-child(4) {
@@ -119,23 +135,23 @@ background: #d1a12a;
 button .blob3:nth-child(5) {
 left: 4.3em;
 top: 1.6em;
-background: #1a6339;
+background: #eb8a3a;
 }
 
 button:hover .blob3:nth-child(2) {
-background: #fbd773;
-}
-
-button:hover .blob3:nth-child(3) {
-background: #389460;
-}
-
-button:hover .blob3:nth-child(4) {
 background: #d1a12a;
 }
 
+button:hover .blob3:nth-child(3) {
+background: #eb8a3a;
+}
+
+button:hover .blob3:nth-child(4) {
+background: #eaaf01;
+}
+
 button:hover .blob3:nth-child(5) {
-background: #1a6339;
+background: #ab8213;
 }
 
 button:hover .blob3 {
@@ -155,42 +171,42 @@ transition: transform .3s ease-in-out, background .3s ease-in-out;
 button .blob2:nth-child(2) {
 left: 0em;
 top: 0;
-background: #389460;
+background: #d61717;
 }
 
 button .blob2:nth-child(3) {
 left: 1.8em;
 top: 0;
 z-index: -1;
-background: #fbd773;
+background: #a0200c;
 }
 
 button .blob2:nth-child(4) {
 left: 4em;
 top: -1em;
-background: #d1a12a;
+background: #f76560;
 }
 
 button .blob2:nth-child(5) {
 left: 4.3em;
 top: 1.6em;
-background: #1a6339;
+background: #c95018;
 }
 
 button:hover .blob2:nth-child(2) {
-background: #fbd773;
+background: #d61717;
 }
 
 button:hover .blob2:nth-child(3) {
-background: #389460;
+background: #f76560;
 }
 
 button:hover .blob2:nth-child(4) {
-background: #d1a12a;
+background: #a0200c;
 }
 
 button:hover .blob2:nth-child(5) {
-background: #1a6339;
+background: #c95018;
 }
 
 button:hover .blob2 {

@@ -4,8 +4,9 @@
 
 <main>
   <div id="author-info">
-    <h1><%= entry.date.toString().slice(0,15)%></h1>
+    <h1><%= entry.title%></h1>
     <h4><%= entry.authorId.name %></h4>
+    <h5><%= entry.date.toString().slice(0,15)%></h5>
     <h6><%= entry.date.toString().slice(15,24)%></h6>
     <div><%= entry.text %></div>
   </div>
@@ -49,27 +50,32 @@
         </button>
       </div>
     </form>
-    <div>
+    <div id="comment-count">
       <i class="fa-regular fa-comments"></i>
       <p><%= entry.comments.length %></p>
     </div>
   </div>
-  <ul>
-    <% entry.comments.forEach(comment => { %> 
-      <li>
-        <img src="<%= comment.authorId.avatar %>" class="avatar"/>
-        <%= comment.authorId.name %>
-        <%= entry.date.toString().slice(0,15)%>
-        <%= entry.date.toString().slice(15,24)%>
-        <%= comment.text %>
-        <% if (user.profile._id.equals(comment.authorId._id)) { %>
-        <form action="/entries/<%= entry._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-          <button type="submit" id="delete-icon"><i class="fa-solid fa-trash-can"></i></button>
-        </form>
-      </li>
-      <% } %>
-    <% }) %> 
-  </ul>
+  <h4 id="support-header">Your Support System:</h4>
+  <div id="comments">
+    <ul id="comment-list">
+      <% entry.comments.forEach(comment => { %> 
+        <li>
+          <img src="<%= comment.authorId.avatar %>" class="avatar"/>
+          <ul id="single-comment">
+            <li><%= comment.authorId.name %></li>
+            <li><%= entry.date.toString().slice(0,15)%></li>
+            <li><%= entry.date.toString().slice(15,24)%></li>
+            <li><%= comment.text %></li>
+        </ul>
+          <% if (user.profile._id.equals(comment.authorId._id)) { %>
+          <form action="/entries/<%= entry._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+            <a type="submit" id="delete-comment-icon"><i class="fa-solid fa-trash-can"></i></a>
+          </form>
+        </li>
+        <% } %>
+      <% }) %>  
+    </ul>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
