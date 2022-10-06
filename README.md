@@ -48,5 +48,6 @@ Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly
 
 ## Credits
 - [Toggle button for private feature](https://codeconvey.com/convert-checkbox-to-toggle-button-css/)
+- [Blob Button Styling](https://uiverse.io/detail/adamgiebl/soft-gecko-85)
 - Black Mango font from Canva
 - Animations from Animate.CSS 

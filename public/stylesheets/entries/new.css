@@ -1,3 +1,4 @@
+
 .cm-toggle {
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
@@ -40,23 +41,29 @@
 	background: #2e844d;
 }
 
+.new-body {
+	min-height: 100vh;
+}
+
 #journal-intro {
 	font-family: itc-avant-garde-gothic-pro,sans-serif;
   font-weight: 300;
-  font-style: normal;
+  font-style: bold;
   text-align: center;
 }
 
 textarea {
   width: 100%;
-  height: 150px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
   font-size: 16px;
-  resize: none;
+}
+
+h4 {
+	padding-right: 10px;
 }
 
 h4, label {
@@ -65,10 +72,18 @@ h4, label {
   font-style: italic;
 }
 
+#title{
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+}
+
 #private-toggle {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 10px; 
+	padding-top: 20px; 
 }
 
 #submit-button {
@@ -164,7 +179,5 @@ button {
  button:active {
 	border: 2px solid white;
  }
- 
- 
  
  

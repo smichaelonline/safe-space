@@ -5,7 +5,7 @@
   <h1><%= title %></h1>
   <form id="new-form" action="/entries/<%= entry._id %>?_method=PUT" method="POST">
     <input type="text" name="title"> 
-    <textarea rows="15" cols="13" name="text" required></textarea> 
+    <textarea placeholder="<%= entry.text %>" rows="15" cols="13" name="text" required></textarea> 
     <button type="submit" id="update-button">Update</button>
   </form>
 </main>

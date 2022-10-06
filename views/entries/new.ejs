@@ -3,27 +3,30 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1></h1>
-  <form action="/entries" method="POST">
-    <h3 id="journal-intro">Tell us about your day</h3>
-    <div id="title"> 
-      <h4>Journal title</h4>
-      <input type="text" name="title"> 
+  <div class="new-body">
+    <div class="form-div">
+      <form action="/entries" method="POST">
+        <h3 id="journal-intro">Tell us about your day</h3>
+        <div id="title"> 
+          <h4>Journal title:  </h4>
+          <input type="text" name="title"> 
+        </div>
+        <textarea rows="20" cols="16" name="text" placeholder="Write your journal here..."required></textarea>
+        <div id="private-toggle">
+          <label for="private">Private</label> 
+          <input type="checkbox" name="private" id="private" class="cm-toggle">
+        </div>
+        <div id="submit-button">
+          <button><span class="text">Submit</span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+          </button>
+        </div>
+      </form>
     </div>
-    <textarea rows="15" cols="13" name="text" placeholder="Write your journal here..."required></textarea>
-    <div id="private-toggle">
-      <label for="private">Private</label> 
-      <input type="checkbox" name="private" id="private" class="cm-toggle">
-    </div>
-    <div id="submit-button">
-      <button><span class="text">Submit</span>
-        <span class="blob"></span>
-        <span class="blob"></span>
-        <span class="blob"></span>
-        <span class="blob"></span>
-      </button>
-    </div>
-  </form>
+  </div>
 </main>
 
 <%- include("../partials/footer") %>
