@@ -5,10 +5,11 @@
 
 ## About the App 
 
-##### Color Palette 
-`#389460`
-`#fbd773`
-`#d1a12a`
+Safe Space was initally designed as a journaling app but grew to a larger idea. While you can journal, you can find a community of people that can be your support system as you work through problems or be there to cheer you on when you're having a good day. 
+
+Throughout my mental health journey, I've found that while it's great to speak to a professional, sometimes it helps to speak to someone who is going through something similar. 
+
+Having open and candid conversations about mental health is something i've kept top of mind in all aspects of my life and wanted to showcase it with Safe Space. 
 
 ## Getting Started 
 Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly.dev/)
@@ -16,6 +17,11 @@ Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly
 ## Planning 
 - [Trello Board](https://trello.com/invite/b/sJSXYzy5/41f1fabb8843138b6316bc38a48dc1ea/safe-space)
 - [Wireframe and ERD](https://whimsical.com/safe-space-W1YXcz2jxqdnxKpzkzvd39)
+
+##### Color Palette 
+`#389460`
+`#fbd773`
+`#d1a12a`
 
 ## Technologies Used 
 - Javascript 
@@ -37,6 +43,8 @@ Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly
 - [ ] Populate user's name immediately once they log in and are brought to the home page 
 - [ ] Add a chat feature that allows users to talk to someone if they are in a crisis
 - [ ] Create a cheer button (similar to a like button) that shows how many users are cheering for someone
+- [ ] Add Friends and make a community visible on a profile 
+- [ ] Add a profile view
 
 ## Credits
 - [Toggle button for private feature](https://codeconvey.com/convert-checkbox-to-toggle-button-css/)
