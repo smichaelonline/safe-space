@@ -45,11 +45,16 @@
 	min-height: 100vh;
 }
 
+#sun {
+	width: 100vw; 
+}
+
 #journal-intro {
 	font-family: itc-avant-garde-gothic-pro,sans-serif;
   font-weight: 300;
   font-style: bold;
   text-align: center;
+	margin: 0; 
 }
 
 textarea {
