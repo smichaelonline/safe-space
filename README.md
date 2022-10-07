@@ -45,6 +45,7 @@ Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly
 - [ ] Add Friends and make a community visible on a profile 
 - [ ] Add a profile view
 - [ ] Desktop friendly 
+- [ ] Add Admin functionality 
 
 ## Credits
 - [Toggle button for private feature](https://codeconvey.com/convert-checkbox-to-toggle-button-css/)
