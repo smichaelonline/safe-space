@@ -43,6 +43,7 @@ h1 {
   justify-content: denter; 
   align-items: center;
   margin: 10px; 
+  border:rgba(255, 255, 255, 1) 2px solid 
 }
 
 #author-info{
