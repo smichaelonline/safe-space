@@ -4,15 +4,15 @@
 
 <main>
   <div id="author-info">
-    <h1><%= entry.title%></h1>
-    <h4><%= entry.authorId.name %></h4>
-    <h5><%= entry.date.toString().slice(0,15)%></h5>
-    <h6><%= entry.date.toString().slice(15,24)%></h6>
-    <div><%= entry.text %></div>
+    <div id="title"><%= entry.title%></div>
+    <div id="entry-date"><%= entry.date.toString().slice(0,15)%></div>
+    <div id="entry-time"><%= entry.date.toString().slice(15,24)%></div>
+    <div id="author-name"><%= entry.authorId.name %></div>
+    <div id="entry-text"><%= entry.text %></div>
   </div>
   <% if (user.profile._id.equals(entry.authorId._id)) { %>
   <div id="form-div">
-    <div>
+    <div id="edit">
       <form action="/entries/<%= entry._id %>/edit">
         <div type="submit" id="edit-button">
           <button><span class="text">Edit</span>
@@ -24,7 +24,7 @@
         </div>
       </form>
     </div>
-    <div>
+    <div id="delete">
       <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
         <div id="delete-button">
           <button type="submit"><span class="text">Delete</span>
@@ -40,27 +40,32 @@
 <% } %>
     </form>
     <div id="comment-count">
-      <i class="fa-regular fa-comments"></i>
-      <p><%= entry.comments.length %></p>
+      <i class="fa-regular fa-comments fa-2x"></i>
+      <div id="count"><%= entry.comments.length %></div>
     </div>
   </div>
-  <h4 id="support-header">Your Support System:</h4>
+
+  <div><h4 id="support-header">Your Support System:</h4></div>
+  
   <div id="comments">
     <ul id="comment-list">
       <% entry.comments.forEach(comment => { %> 
         <li>
-          <img src="<%= comment.authorId.avatar %>" class="avatar"/>
-          <ul id="single-comment">
-            <li><%= comment.authorId.name %></li>
-            <li><%= entry.date.toString().slice(0,15)%></li>
-            <li><%= entry.date.toString().slice(15,24)%></li>
-            <li><%= entry.title %></li>
-            <li><%= comment.text %></li>
-        </ul>
-          <% if (user.profile._id.equals(comment.authorId._id)) { %>
-          <form action="/entries/<%= entry._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-            <a type="submit" id="delete-comment-icon"><i class="fa-solid fa-trash-can"></i></a>
-          </form>
+          <div id="comment-info">
+            <img src="<%= comment.authorId.avatar %>" class="avatar"/>
+            <ul id="single-comment">
+              <li id="comment-name"><%= comment.authorId.name %></li>
+              <li id="comment-date"><%= entry.date.toString().slice(0,15)%></li>
+              <li id="comment-time"><%= entry.date.toString().slice(15,24)%></li>
+              <li><%= comment.text %></li>
+            </ul>
+            <% if (user.profile._id.equals(comment.authorId._id)) { %>
+              <div id="delete-comment"> 
+                <form action="/entries/<%= entry._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                  <button id="delete-comment-button" type="submit"><i class="fa-solid fa-trash-can fa-lg"></i></button>
+                </form>
+              </div>
+            </div>
         </li>
         <% } %>
       <% }) %>  
@@ -68,7 +73,7 @@
   </div>
   <div id="post-section">
     <form action="/entries/<%= entry._id %>/comments" method="POST"> 
-      <textarea rows="10" cols="15" name="text" placeholder="Share kind words..." required></textarea>
+      <textarea rows="2" cols="25" name="text" placeholder="Share kind words..." required></textarea>
       <div id="post-button">
         <button><span class="text">Post</span>
           <span class="blob"></span>
@@ -77,6 +82,7 @@
           <span class="blob"></span>
         </button>
       </div>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
