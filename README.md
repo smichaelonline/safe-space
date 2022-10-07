@@ -50,6 +50,9 @@ Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly
 - [ ] Add a profile view
 - [ ] Desktop friendly 
 - [ ] Add Admin functionality 
+- [ ] Nav option based on topic - sorts journal posts based on topic 
+- [ ] Add keyword tags to help sort into different categories 
+- [ ] Sort journal entries by newest to oldest
 
 ## Credits
 - [Toggle button for private feature](https://codeconvey.com/convert-checkbox-to-toggle-button-css/)
