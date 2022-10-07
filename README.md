@@ -11,6 +11,10 @@ Throughout my mental health journey, I've found that while it's great to speak t
 
 Having open and candid conversations about mental health is something i've kept top of mind in all aspects of my life and wanted to showcase it with Safe Space. 
 
+![Safe Space Screenshot 1](https://github.com/smichaelonline/safe-space/blob/main/public/assets/screenshot-3.png)
+![Safe Space Screenshot 2](https://github.com/smichaelonline/safe-space/blob/main/public/assets/screenshot-2.png)
+![Safe Space Screenshot 3](https://github.com/smichaelonline/safe-space/blob/main/public/assets/screenshot-1.png)
+
 ## Getting Started 
 Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly.dev/)
 
