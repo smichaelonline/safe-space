@@ -11,30 +11,39 @@
 
     <div id="entry-div">
       <% entries.forEach(entry => { %>
-        <div id="entry-date">
-          <%= entry.date.toString().slice(0,15)%>
-        </div>
+        <div id="one-entry">
+          <div id="author-info">
+            <img src="<%= entry.authorId.avatar %>" class="avatar"/>
+            <div id="extra-info-div">
+              <p><%= entry.authorId.name %></p>
+              <div id="entry-date">
+                <%= entry.date.toString().slice(0,15)%>
+              </div>
+              <div id="entry-time">
+                <%= entry.date.toString().slice(15,24)%>
+              </div>
+            </div>
+          </div>
+              
+            
         
-        <div id="entry-time">
-          <%= entry.date.toString().slice(15,24)%>
-        </div>
+          <div id="entry-text">
+            <ul id="entry-contents">
+              <li id="title-text"><%= entry.title %></li>
+              <li id="entry-body"><%= entry.text%></li>
+            </ul>
+          </div>
 
-        <img src="<%= entry.authorId.avatar %>" class="avatar"/>
-        <p><%= entry.authorId.name %></p>
-
-        <div 
-        id="entry-text"><%= entry.text%>
-        </div>
-
-        <div id="details-button">
-          <a href="/entries/<%= entry._id %>" id="Details">
-            <button><span class="text">Details</span>
-              <span class="blob"></span>
-              <span class="blob"></span>
-              <span class="blob"></span>
-              <span class="blob"></span>
-            </button>
-            </a>
+          <div id="details-button">
+            <a href="/entries/<%= entry._id %>" id="Details">
+              <button><span class="text">Details</span>
+                <span class="blob"></span>
+                <span class="blob"></span>
+                <span class="blob"></span>
+                <span class="blob"></span>
+              </button>
+              </a>
+          </div>
         </div>
       <% }) %>
     </div>

@@ -38,17 +38,6 @@
     </div>
   </div>
 <% } %>
-  <div>
-    <form action="/entries/<%= entry._id %>/comments" method="POST"> 
-      <textarea rows="10" cols="15" name="text" placeholder="Share kind words..." required></textarea>
-      <div id="post-button">
-        <button><span class="text">Post</span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-        </button>
-      </div>
     </form>
     <div id="comment-count">
       <i class="fa-regular fa-comments"></i>
@@ -65,6 +54,7 @@
             <li><%= comment.authorId.name %></li>
             <li><%= entry.date.toString().slice(0,15)%></li>
             <li><%= entry.date.toString().slice(15,24)%></li>
+            <li><%= entry.title %></li>
             <li><%= comment.text %></li>
         </ul>
           <% if (user.profile._id.equals(comment.authorId._id)) { %>
@@ -76,6 +66,17 @@
       <% }) %>  
     </ul>
   </div>
+  <div id="post-section">
+    <form action="/entries/<%= entry._id %>/comments" method="POST"> 
+      <textarea rows="10" cols="15" name="text" placeholder="Share kind words..." required></textarea>
+      <div id="post-button">
+        <button><span class="text">Post</span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+          <span class="blob"></span>
+        </button>
+      </div>
 </main>
 
 <%- include('../partials/footer') %>

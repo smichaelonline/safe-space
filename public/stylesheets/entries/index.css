@@ -8,13 +8,55 @@ h1 {
   font-family: itc-avant-garde-gothic-pro,sans-serif;
   font-weight: 300;
   font-style: bold;
-  text-align: center;
 	margin-top: 25px; 
-  font-size: 5vw;
+  text-align: center;
 }
 
+#header-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+#hand-sun {
+  width: 60%; 
+  height: 20%;
+}
 
+#entry-contents{
+  list-style: none; 
+  text-align: center; 
+  padding: 0; 
+}
+
+#one-entry{
+  display: flex; 
+  flex-direction: column;
+  justify-content: denter; 
+  align-items: center;
+  margin: 10px; 
+}
+
+#author-info{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#extra-info-div {
+  flex-direction: column;
+
+}
+
+#entry-text {
+  margin-left: 20px; 
+  width: 100%; 
+  text-align: left;
+}
+
+#entry-contents{
+  text-align: left;
+}
 /* details button */
 /* From uiverse.io by @adamgiebl */
 

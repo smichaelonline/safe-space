@@ -6,10 +6,10 @@
   <h1 class="animate__animated animate__fadeInDown">Your Journal</h1>
   <div class="animate__animated animate__fadeIn">
     <% entries.forEach(entry => { %>
-      <div id="entryDate"><%= entry.date.toString().slice(0,15)%></div>
-      <div id="entryDate"><%= entry.date.toString().slice(15,24)%></div>
-      <p><%= entry.authorId.name %></p>
-      <div id="entryText"><%= entry.text%></div>
+      <p id="author"><%= entry.authorId.name %></p>
+      <div id="entry-date"><%= entry.date.toString().slice(0,15)%></div>
+      <div id="entry-time"><%= entry.date.toString().slice(15,24)%></div>
+      <div id="entry-text"><%= entry.text%></div>
       <div id="details-button">
         <a href="/entries/<%= entry._id %>" id="Details">
           <button><span class="text">Details</span>

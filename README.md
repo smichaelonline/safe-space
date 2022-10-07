@@ -1,7 +1,7 @@
 ![mockup](https://github.com/smichaelonline/safe-space/blob/main/public/assets/safe-space-mockup.png)
 
 # Safe Space 
-*A carefully designed mobile-first mental-health app. Providing you a space where can track your thoughts and find a supportive community to lean on.*
+*A carefully designed mobile and tablet-friendly mental-health app. Providing you a space where can track your thoughts and find a supportive community to lean on. Anytime and anywhere.*
 
 ## About the App 
 
@@ -35,7 +35,6 @@ Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly
 - Bootstrap
 - Animate.css
 
-
 ## Icebox 🧊
 - [ ] Add light/dark mode
 - [ ] Add a mood tracker option 
@@ -45,6 +44,7 @@ Start journaling now - [Safe Space](https://safe-space-journal-and-community.fly
 - [ ] Create a cheer button (similar to a like button) that shows how many users are cheering for someone
 - [ ] Add Friends and make a community visible on a profile 
 - [ ] Add a profile view
+- [ ] Desktop friendly 
 
 ## Credits
 - [Toggle button for private feature](https://codeconvey.com/convert-checkbox-to-toggle-button-css/)
