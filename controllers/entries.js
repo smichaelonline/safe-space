@@ -6,7 +6,7 @@ function index(req, res){
   .then(entries => {
     res.render('entries/index', {
       entries, 
-      title: 'Feed'
+      title: 'Your Community'
     })
   })
   .catch(err => {
