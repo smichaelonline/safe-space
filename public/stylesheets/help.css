@@ -5,8 +5,29 @@ h1,h3, p, button {
   flex-direction: column;
 }
 
-.help-buttons {
+h1 {
+	font-family: itc-avant-garde-gothic-pro,sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+h3 {
+	font-family: itc-avant-garde-gothic-pro,sans-serif;
+	font-weight: 600;
+	font-style: italic;
+	padding: 0; 
+	margin: 0; 
+}
+
+#help-button, #crisis-help-line{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.help {
+	display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -19,6 +40,28 @@ h1,h3, p, button {
   flex-direction: column;
   margin: 5px 0 10px 0;
 }
+
+#back-to-home {
+	margin-top: 70px; 
+}
+
+#info-text {
+	text-align: center;
+	padding-left: 20px;  
+	padding-right: 20px;  
+	font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#crisis-button{
+	margin-left: 14px;
+}
+
+#crisis-button{
+	margin-bottom: 35px;
+}
+
 /* From uiverse.io by @adamgiebl */
 
 button {
