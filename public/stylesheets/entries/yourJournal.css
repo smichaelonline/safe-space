@@ -3,21 +3,40 @@ h1 {
   font-weight: 300;
   font-style: bold;
   text-align: center;
-  font-size: 5vw;
-	margin-top: 25px; 
+	margin-top: 40px; 
+  margin-left: 25px;
 }
 
-#entry-date, #entry-time {
+#entry-time {
   font-family: itc-avant-garde-gothic-pro,sans-serif;
   font-weight: 300;
   font-style: bold;
-  text-align: center;
+  margin-left: 25px;
+}
+
+#entry-date{
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-left: 25px;
+}
+
+#title{
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  font-style: normal;
+  margin-left: 25px;
+  margin-bottom: 0;
 }
 
 #entry-text {
   font-family: itc-avant-garde-gothic-pro,sans-serif;
-  font-weight: 500;
-  font-style: bold;
+  font-weight: 300;
+  font-style: normal;
+  margin: 15px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 #details-button{
@@ -25,8 +44,19 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
+#header-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#hand-sun {
+  width: 50%; 
+  height: 20%;
+}
 /* details button */
 /* From uiverse.io by @adamgiebl */
 

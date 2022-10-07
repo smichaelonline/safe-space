@@ -3,10 +3,13 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1 class="animate__animated animate__fadeInDown">Your Journal</h1>
+  <div id="header-div">
+    <h1 id="journal-line" class="animate__animated animate__fadeInDown">Your Journal</h1>
+    <img id="hand-sun" src="/assets/the-hand-with-sun.png" alt="Hand reaching out to sun">
+  </div>
   <div class="animate__animated animate__fadeIn">
     <% entries.forEach(entry => { %>
-      <p id="author"><%= entry.authorId.name %></p>
+      <p id="title"><%= entry.title %></p>
       <div id="entry-date"><%= entry.date.toString().slice(0,15)%></div>
       <div id="entry-time"><%= entry.date.toString().slice(15,24)%></div>
       <div id="entry-text"><%= entry.text%></div>
