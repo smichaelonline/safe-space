@@ -1,4 +1,4 @@
-![mockup](https://github.com/smichaelonline/safe-space/blob/main/public/assets/safe-space-mockup.png)
+![mockup](https://github.com/smichaelonline/safe-space/blob/main/public/assets/safe-space-mockup-final.png)
 
 # Safe Space 
 *A carefully designed mobile and tablet-only mental-health app. Providing you a space where can track your thoughts and find a supportive community to lean on. Anytime and anywhere.*
